@@ -21,6 +21,8 @@ if (file_exists('vendor/autoload.php')) {
     $loader = include 'vendor/autoload.php';
 }
 
+putenv("ZF2_PATH=/Applications/XAMPP/xamppfiles/htdocs/zf2/library");
+
 // Support for ZF2_PATH environment variable or git submodule
 if (($zf2Path = getenv('ZF2_PATH') ?: (is_dir('vendor/ZF2/library') ? 'vendor/ZF2/library' : false)) !== false) {
     if (isset($loader)) {
